@@ -1,6 +1,6 @@
-// The data array. Note that images are just placeholders
 var currentCaseId = 2215;
 
+// The data array. Note that images are just placeholders
 window.ddPatientsList = [
   {
     Name: 'Smith, John',
