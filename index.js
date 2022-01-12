@@ -3,7 +3,7 @@ var currentCaseId = 2215;
 
 window.ddPatientsList = [
   {
-    Name: 'John Smith',
+    Name: 'Smith, John',
     CaseId: 'W2264&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Lock: '',
     PrimarySubstance: 'Aspirin&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
@@ -13,7 +13,7 @@ window.ddPatientsList = [
     URL: '#',
   },
   {
-    Name: 'Bryan Smith',
+    Name: 'Smith, Bryan',
     CaseId: 'W2265&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Lock: '<img src="https://dev.toxaware.net/assets/Images/Padlock_Gold.png" alt="Call Locked" class="lockImage">',
     PrimarySubstance: 'Beer&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
