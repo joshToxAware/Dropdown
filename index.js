@@ -4,9 +4,9 @@ var currentCaseId = 2215;
 window.ddPatientsList = [
   {
     Name: 'John Smith',
-    CaseId: 'W2264&nbsp;&bull;&nbsp;',
+    CaseId: 'W2264&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Lock: '',
-    PrimarySubstance: 'Aspirin&nbsp;&bull;&nbsp;',
+    PrimarySubstance: 'Aspirin&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Age: '14 years old',
     Image:
       'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png',
@@ -14,9 +14,9 @@ window.ddPatientsList = [
   },
   {
     Name: 'Bryan Smith',
-    CaseId: 'W2265&nbsp;&bull;&nbsp;',
+    CaseId: 'W2265&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Lock: '<img src="https://dev.toxaware.net/assets/Images/Padlock_Gold.png" alt="Call Locked" class="lockImage">',
-    PrimarySubstance: 'Beer&nbsp;&bull;&nbsp;',
+    PrimarySubstance: 'Beer&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Age: '42 years old',
     Image:
       'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png',
@@ -58,7 +58,7 @@ var dropDownListObj = new ej.dropdowns.DropDownList({
   fields: { text: 'Name' },
   // set the template content for list items
   itemTemplate:
-    '<div class="patientWrapper"><img src="${Image}" alt="${Name}" class="patientImage"><div class="patientInfoWrapper"><div class="patientName">${Name}</div><div class="patientInfo">${CaseId} ${PrimarySubstance} ${Age}</div></div>${Lock}</div>',
+    '<div class="patientWrapper"><img src="${Image}" alt="${Name}" class="patientImage"><div class="patientInfoWrapper"><div class="patientName">${Name}</div><div class="patientInfo">${CaseId}${PrimarySubstance}${Age}</div></div>${Lock}</div>',
   // set the template content for displays the selected items in input element.
   valueTemplate:
     '<div class="itemSelected"><img class="itemSelectedImage" src="${Image}" height="26px" width="26px" alt="${Name}"><span class="itemSelectedName">${Name}</span></div>',
