@@ -7,22 +7,22 @@ window.ddPatientsList = [
     CaseId: 'W2264&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Lock: '',
     PrimarySubstance: 'Aspirin&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
-    Age: '14',
+    Age: 14,
     AgeUnit: 'Years',
     Image:
       'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png',
-    URL: '#',
+    URL: '#'
   },
   {
     Name: 'Smith, Bryan',
     CaseId: 'W2265&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
     Lock: '<img src="https://dev.toxaware.net/assets/Images/Padlock_Gold.png" alt="Call Locked" class="lockImage">',
     PrimarySubstance: 'Beer&nbsp;&nbsp;&bull;&nbsp;&nbsp;',
-    Age: '42',
+    Age: 42,
     AgeUnit: 'Years',
     Image:
       'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png',
-    URL: '#',
+    URL: '#'
   },
   {
     Name: 'Add patient',
@@ -32,7 +32,7 @@ window.ddPatientsList = [
     Age: '',
     AgeUnit: '',
     Image: 'https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/plus-512.png',
-    URL: '#',
+    URL: '#'
   },
   {
     Name: 'Next patient',
@@ -42,7 +42,7 @@ window.ddPatientsList = [
     Age: '',
     AgeUnit: '',
     Image: 'https://www.pngrepo.com/png/238362/512/right-arrow-next.png',
-    URL: 'https://dev.toxaware.net/exposure/edit/' + (currentCaseId + 1),
+    URL: 'https://dev.toxaware.net/exposure/edit/' + (currentCaseId + 1)
   },
   {
     Name: 'Previous patient',
@@ -52,9 +52,10 @@ window.ddPatientsList = [
     Age: '',
     AgeUnit: '',
     Image: 'http://cdn.onlinewebfonts.com/svg/img_529.png',
-    URL: 'https://dev.toxaware.net/exposure/edit/' + (currentCaseId - 1),
-  },
+    URL: 'https://dev.toxaware.net/exposure/edit/' + (currentCaseId - 1)
+  }
 ];
+
 // initialize DropDownList component
 var dropDownListObj = new ej.dropdowns.DropDownList({
   // set the patients data to dataSource property
@@ -74,6 +75,7 @@ var dropDownListObj = new ej.dropdowns.DropDownList({
   // bind the change event
   change: function() {
     // somehow redirect to the appropriate URL
-  },
+  }
 });
+
 dropDownListObj.appendTo('#patients');
