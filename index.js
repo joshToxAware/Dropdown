@@ -1,7 +1,7 @@
 // The data array. Note that images are just placeholders
 var currentCaseId = 2215;
 
-window.ddPaitentsList = [
+window.ddPatientsList = [
   {
     Name: 'John Smith',
     CaseId: 'W2264',
@@ -23,7 +23,7 @@ window.ddPaitentsList = [
     URL: '#',
   },
   {
-    Name: 'Add paitent',
+    Name: 'Add patient',
     CaseId: '',
     Lock: '',
     PrimarySubstance: '',
@@ -32,7 +32,7 @@ window.ddPaitentsList = [
     URL: '#',
   },
   {
-    Name: 'Next paitent',
+    Name: 'Next patient',
     CaseId: 'W2286',
     Lock: '',
     PrimarySubstance: '',
@@ -41,7 +41,7 @@ window.ddPaitentsList = [
     URL: 'https://dev.toxaware.net/exposure/edit/'+(currentCaseId+1),
   },
   {
-    Name: 'Previous paitent',
+    Name: 'Previous patient',
     CaseId: 'W2284',
     Lock: '',
     PrimarySubstance: '',
@@ -52,23 +52,23 @@ window.ddPaitentsList = [
 ];
 // initialize DropDownList component
 var dropDownListObj = new ej.dropdowns.DropDownList({
-  // set the paitents data to dataSource property
-  dataSource: window.ddPaitentsList,
+  // set the patients data to dataSource property
+  dataSource: window.ddPatientsList,
   // map the appropriate columns to fields property
   fields: { text: 'Name' },
   // set the template content for popup header element
   headerTemplate:
-    '<div class="header"> <span>Photo</span> <span class="info">Paitent Info</span></div>',
+    '<div class="header"> <span>Photo</span> <span class="info">Patient Info</span></div>',
   // set the template content for list items
   itemTemplate:
-    '<div class="itemWrapper"><img class="paitentImage" src="${Image}" alt="${Name}"><div class="paitentInfoWrapper"><div class="paitentName">${Name}</div><div class="caseId">${CaseId}&nbsp;&bull;&nbsp;${PrimarySubstance}&nbsp;&bull;&nbsp;${Age}</div></div>${Lock}',
+    '<div class="itemWrapper"><img class="patientImage" src="${Image}" alt="${Name}"><div class="patientInfoWrapper"><div class="patientName">${Name}</div><div class="caseId">${CaseId}&nbsp;&bull;&nbsp;${PrimarySubstance}&nbsp;&bull;&nbsp;${Age}</div></div>${Lock}',
   // set the template content for displays the selected items in input element.
   valueTemplate:
-    '<div style="width:100%;height:100%;">' +
-    '<img class="value" src=" ${Image} " height="26px" width="26px" alt="Paitent"/>' +
+    '<div class="itemSelected">' +
+    '<img class="value" src=" ${Image} " height="26px" width="26px" alt="Patient"/>' +
     '<div class="name"> ${Name} </div></div>',
   // set the placeholder to DropDownList input element
-  placeholder: 'Switch between paitents',
+  placeholder: 'Switch between patients',
   // set the height of the popup element
   popupHeight: '300px',
   // bind the change event
@@ -76,4 +76,4 @@ var dropDownListObj = new ej.dropdowns.DropDownList({
     // somehow redirect to the appropriate URL
   },
 });
-dropDownListObj.appendTo('#paitents');
+dropDownListObj.appendTo('#patients');
