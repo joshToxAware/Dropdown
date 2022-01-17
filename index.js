@@ -13,8 +13,7 @@ window.ddPatientsList = [
     patientAge: "42 Years",
     patientGender: "Male",
     patientName: "James, Liam",
-    substanceName: "Pizza Hut pepperoni pizza",
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png'
+    substanceName: "Pizza Hut pepperoni pizza"
   },
   {
     caseId: "Z2214",
@@ -25,8 +24,7 @@ window.ddPatientsList = [
     patientAge: "13 Years",
     patientGender: "Female",
     patientName: "Young, Grace",
-    substanceName: "Pizza Hut pepperoni pizza",
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png'
+    substanceName: "Pizza Hut pepperoni pizza"
   },
   {
     caseId: "Z2215",
@@ -37,9 +35,7 @@ window.ddPatientsList = [
     patientAge: "13 Years",
     patientGender: "Male",
     patientName: "Fell, Joe",
-    substanceName: "Pizza Hut pepperoni pizza",
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png'
+    substanceName: "Pizza Hut pepperoni pizza"
   },
   {
     caseId: "Z2216",
@@ -50,8 +46,7 @@ window.ddPatientsList = [
     patientAge: "14 Years",
     patientGender: "Male",
     patientName: "Hornee, Charlie",
-    substanceName: "Beer",
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png'
+    substanceName: "Beer"
   }
 ];
 
