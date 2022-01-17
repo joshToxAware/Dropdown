@@ -1,7 +1,8 @@
-// these need to be changed 
-var currentExposureId = 2214;
+// get the current exposure id
+var lastPartOfURL = window.location.href.split("/");
+var currentExposureId = lastPartOfURL[lastPartOfURL.length - 1];
 
-// The data array. Note that images are just placeholders. Order by CaseId
+// Get the data
 window.ddPatientsList = [
   {
     caseId: "Z2212",
@@ -61,7 +62,7 @@ var dropDownListObj = new ej.dropdowns.DropDownList({
   // map the appropriate columns to fields property
   fields: { text: 'Name', value: 'caseId' },
   // set the template content for list items
-  itemTemplate: '<div class="patientWrapper"><div class="patientInfoWrapper"><div class="patientName">${patientName}</div><div class="patientInfo"><span>${caseId}</span><span>${substanceName}</span><span>${patientAge}</span></div></div><img src="https://dev.toxaware.net/assets/Images/Padlock_Gold.png" alt="Expousre Lock Status: ${exposureLock}" class="${exposureLock}LockImage"></div>',
+  itemTemplate: '<div class="patientWrapper"><div class="patientInfoWrapper"><div class="patientName">${patientName}</div><div class="patientInfo"><span>${caseId}</span><span>${substanceName}</span><span>${patientAge}</span></div></div><img src="https://dev.toxaware.net/assets/Images/Padlock_Gold.png" alt="Expousre Locked: ${exposureLock}" class="${exposureLock}LockImage"></div>',
   // set the template content for displays the selected items in input element.
   valueTemplate:
     '<div class="itemSelected"><span class="itemSelectedName">${patientName}</span></div>',
