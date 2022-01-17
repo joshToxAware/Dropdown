@@ -73,6 +73,7 @@ var dropDownListObj = new ej.dropdowns.DropDownList({
   change: (event) => {
     // do any nessecary validation before redirecing. Check if the exposure needs to be saved. 
     // Should the dropdown open patients in a new tab, need to check if they already have it open
+    var error = false;
     if (error == true) {
       // display an error message to user
     }
