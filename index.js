@@ -50,6 +50,14 @@ window.ddPatientsList = [
   }
 ];
 
+// set which patient to select
+var selectedIndexPosition = null;
+for (var i = 0; i < window.ddPatientsList.length; i++) {
+  if (window.ddPatientsList[i].exposureId == currentExposureId) {
+    selectedIndexPosition = i;
+  }
+}
+
 // initialize DropDownList component
 var dropDownListObj = new ej.dropdowns.DropDownList({
   // set the patients data to dataSource property
@@ -65,6 +73,7 @@ var dropDownListObj = new ej.dropdowns.DropDownList({
   placeholder: 'Switch between patients',
   // set the height of the popup element
   popupHeight: '300px',
+  index: selectedIndexPosition,
   // the change event
   change: (event) => {
     // do any nessecary validation before redirecing. Check if the exposure needs to be saved. 
