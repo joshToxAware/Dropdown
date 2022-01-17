@@ -20,39 +20,41 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 12px 16px;
+      padding: 12px 14px;
       box-sizing: border-box;
-    }
-
-    .patientImage {
-      width: 30px;
-      height: 30px;
-      margin-right: 6px;
     }
   
     .patientInfoWrapper {
-      width: calc(100% - 60px - 12px);
+      width: calc(100% - 30px - 10px);
     }
 
     .patientName {
       width: 100%;
-      opacity: 0.87;
       font-size: 14px;
       line-height: 1.4;
+      opacity: 0.87;
     }
 
     .patientInfo {
       width: 100%;
       margin-top: 4px;
       opacity: 0.54;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1.4;
+    }
+
+    .patientInfo span {
+      margin-right: 10px;
+    }
+
+    .patientInfo span:last-of-type {
+      margin-right: 0px;
     }
 
     .trueLockImage {
       width: 30px;
       height: 30px;
-      margin-left: 6px;
+      margin-left: 10px;
     }
 
     .falseLockImage {
@@ -72,15 +74,7 @@
       box-sizing: border-box;
     }
 
-    .itemSelectedImage {
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      margin-right: 8px;
-    }
-
     .itemSelectedName {
-      width: calc(100% - 30px - 10px);
       opacity: 0.87;
       line-height: 1.2;
     }
