@@ -1,6 +1,4 @@
 patientSelected(event) {
-  // need to somehow get UrlList
-
   if (this.exposureDetails['exposureId'] != event.itemData.exposureId) {
     if (this.newIsOnline != '' && this.newIsOnline == 'true') {
       var UrlList = { OpenedUrlList: [] };
