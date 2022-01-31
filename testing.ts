@@ -106,28 +106,28 @@ patientSelected(event) {
 }
 
 OpenExposure(caseId: number, UrlList: string[], IsEdit: boolean) {
-    const openType = IsEdit ? 'edit' : 'view';
-    const location: string = '/exposure/' + openType + '/';
+  const openType = IsEdit ? 'edit' : 'view';
+  const location: string = '/exposure/' + openType + '/';
 
-    let locationToOpen = window.location.origin + location + caseId;
-    const windowAlreadyOpen = this.onlineService.IsWindowViewAlreadyOpen(caseId, UrlList, IsEdit);
-    if (windowAlreadyOpen) {
-      locationToOpen = ''; // blank should bring the already existing window to the front.
-    }
-
-    const openedWindow = window.open(locationToOpen, openType + '/' + caseId);
-    if (!openedWindow) {
-      alert(AppConstants.Messages.PopupBlockerEnabled);
-      return;
-    }
-    if (openedWindow.location.href === 'about:blank') {
-      (openedWindow.location.href = window.location.origin + location + caseId), openType + '/' + caseId;
-    }
-
-    openedWindow.focus();
-    window.blur();
-
-    if (!windowAlreadyOpen) {
-      UrlList.push(openType + '/' + caseId);
-    }
+  let locationToOpen = window.location.origin + location + caseId;
+  const windowAlreadyOpen = this.onlineService.IsWindowViewAlreadyOpen(caseId, UrlList, IsEdit);
+  if (windowAlreadyOpen) {
+    locationToOpen = ''; // blank should bring the already existing window to the front.
   }
+
+  const openedWindow = window.open(locationToOpen, openType + '/' + caseId);
+  if (!openedWindow) {
+    alert(AppConstants.Messages.PopupBlockerEnabled);
+    return;
+  }
+  if (openedWindow.location.href === 'about:blank') {
+    (openedWindow.location.href = window.location.origin + location + caseId), openType + '/' + caseId;
+  }
+
+  openedWindow.focus();
+  window.blur();
+
+  if (!windowAlreadyOpen) {
+    UrlList.push(openType + '/' + caseId);
+  }
+}
