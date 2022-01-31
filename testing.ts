@@ -31,28 +31,28 @@ patientSelected(event) {
             if (this.permissionService.isExposurePageHasEditPermission || !this.permissionService.isExposurePageHasViewPermission) {
               if (event.itemData.exposureStatus == 'Closed') {
                 if (isLoad == true) {
-                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
                 } else {
-                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
                 }
               } else if (event.itemData.exposureStatus == 'Open') {
                 if (isLoad == true) {
                   if (event.itemData.exposureLock) {
                     // need to show the exposure lock showLockWarningModal
                   } else {
-                    this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true, true);
+                    this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true);
                   }
                 } else {
-                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true, true);
+                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true);
                 }
               }
             } else {
               /* if exposure has view permission alone */
               if (this.permissionService.isExposurePageHasViewPermission) {
                 if (isLoad == true) {
-                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
                 } else {
-                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
                 }
               }
             }
@@ -64,27 +64,27 @@ patientSelected(event) {
           if (this.permissionService.isExposurePageHasEditPermission || !this.permissionService.isExposurePageHasViewPermission) {
             if (event.itemData.exposureStatus == 'Closed') {
               if (isLoad == true) {
-                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
               } else {
-                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
               }
             } else if (status == 'Open') {
               if (isLoad == true) {
                 if (event.itemData.exposureLock) {
                   // need to show the exposure lock showLockWarningModal
                 } else {
-                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true, true);
+                  this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true);
                 }
               } else {
-                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true, true);
+                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, true);
               }
             }
           } else {
             if (this.permissionService.isExposurePageHasViewPermission) {
               if (isLoad == true) {
-                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
               } else {
-                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false, true);
+                this.OpenExposure(event.itemData.exposureId, UrlList.OpenedUrlList, false);
               }
             }
           }
@@ -105,7 +105,7 @@ patientSelected(event) {
   // this.multiCaseDropDownObj.select
 }
 
-OpenExposure(caseId: number, UrlList: string[], IsEdit: boolean, IsFocused) {
+OpenExposure(caseId: number, UrlList: string[], IsEdit: boolean) {
     const openType = IsEdit ? 'edit' : 'view';
     const location: string = '/exposure/' + openType + '/';
 
