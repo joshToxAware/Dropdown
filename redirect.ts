@@ -4,6 +4,7 @@ patientSelected(event) {
       var UrlList = { OpenedUrlList: [] };
       var isLoad = true;
 
+      // permissions?
       if (this.permissionService.isExposurePageHasEditPermission || this.permissionService.isExposurePageHasViewPermission) {
         if (
           window.localStorage[AppConstants.LocalStorage.UrlList] != undefined && window.localStorage[AppConstants.LocalStorage.UrlList] != null
